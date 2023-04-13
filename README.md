@@ -39,5 +39,6 @@ public class EvenAndOddNumberUsingJava8 {
 Output:-
 
 Even Numbers->[2, 6, 8, 10, 22]
+
 Odd Numbers->[3, 5, 1, 23]
 
