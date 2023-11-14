@@ -32,6 +32,15 @@ public class EvenAndOddNumberUsingJava8 {
     
 		System.out.println("Odd Numbers->" + Arrays.toString(oddNumbers));
 
+              
+        	List<Integer> n = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8);
+ 		List<Integer> list1 = n.stream().filter(num -> num % 2 == 0).collect(Collectors.toList());
+		System.out.println(list1);
+
+                List<Integer> n = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8);
+		List<Integer> list1 = n.stream().filter(num -> num % 2 != 0).collect(Collectors.toList());
+		System.out.println(list1);
+
 	}
 
 }
@@ -41,4 +50,24 @@ Output:-
 Even Numbers->[2, 6, 8, 10, 22]
 
 Odd Numbers->[3, 5, 1, 23]
+
+
+Question-2
+
+1. Select the Even number
+2. Multiply Each Of them By 2.
+3. Subtract 1 from Each.
+4. Select All the Numbers That Are Greater Than 4.
+
+List<Integer> n = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8);
+
+List<Integer> list = n.stream()
+
+			.filter(num -> num % 2 == 0)
+			.map(num -> num * 2)
+				.map(num -> num - 1)
+				.filter(num -> num > 4)
+			.collect(Collectors.toList());
+		System.out.println(list);
+
 
